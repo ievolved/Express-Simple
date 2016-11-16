@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collect Data from ExpressJS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+</head>
+<body>
+<div id="main">Time to collect some data.  Are you feeling lucky?</div>
+<p />
+<p />
+<div id="extra"></div>
+<p />
+<p />
+<div id="links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="collect.html">Collect Data</a>
+</div>
+
+<FORM method="post" action="processCollected">
+    <P>
+        <LABEL for="firstname">First name: </LABEL>
+        <INPUT type="text" name="firstname"><BR>
+        <LABEL for="lastname">Last name: </LABEL>
+        <INPUT type="text" name="lastname"><BR>
+        <LABEL for="email">email: </LABEL>
+        <INPUT type="text" name="email"><BR>
+        <INPUT type="radio" name="sex" value="Male"> Male<BR>
+        <INPUT type="radio" name="sex" value="Female"> Female<BR>
+        <INPUT type="submit" value="Send"> <INPUT type="reset">
+    </P>
+</FORM>
+</body>
+</html>
