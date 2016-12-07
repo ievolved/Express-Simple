@@ -1,7 +1,6 @@
 
-let http = require("http");
+//let http = require("http");
 let path = require("path");
-let urlPath = require("url");
 let helpers = require("./request-helpers.js");
 
 let port = 8100;
@@ -20,18 +19,16 @@ let app = express();
   });
 
   app.use(bodyParser.urlencoded({ extended: false }));
-  app.use(express.static("web")); // "../web" when running from within webstorm
+  app.use(express.static("web"));
 
   app.post("/processCollected", handleCollectPost);
 
   function handleCollectPost(request, response) {
-    console.log(request.body);
-
     console.log(`firstName is: ${request.body.firstname}`);
     console.log(`lastName is: ${request.body.lastname}`);
     console.log(`email is ${request.body.email}`);
 
-    var whichUrl = "/awesome.html";
+    let whichUrl = "/awesome.html";
     helpers.sendRedirect(response, whichUrl, null);
   }
 }
